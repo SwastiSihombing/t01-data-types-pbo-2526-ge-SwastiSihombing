@@ -3,21 +3,24 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        if (soal.equals("Soal1")) {
-        int a = sc.nextInt();
-        int b = sc.nextInt();
 
-        System.out.println("a = " + a);
-        System.out.println("a = " + a);
-        
-        try{
-            int hasil = Math.addExact(a,b);
-            System.out.println("Hasil: " + hasil);
-        } catch (ArithmeticException e) {
-            System.out.println("OVERFLOW");
+        String soal = sc.next();   
+
+        if (soal.equals("Soal1")) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);  
+
+            try {
+                int hasil = Math.addExact(a, b);
+                System.out.println("Hasil: " + hasil);
+            } catch (ArithmeticException e) {
+                System.out.println("OVERFLOW");
+            }
         }
-    }
+
         else if (soal.equals("Soal2")) {
             double x = sc.nextDouble();
             double y = sc.nextDouble();
