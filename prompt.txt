@@ -1,0 +1,34 @@
+terkait integer overflow detection untuk membaca dan menjumlahkan dua bilangan bulat dalam  bahasa java
+apa yang dimaksud dengan integer overflow
+  int a = sc.nextInt();
+        int b = sc.nextInt();
+
+apakah code ini nerima inputan dari user?
+atau pada code perlu ditambahkan input?
+long, BigInteger, atau try-catch untuk mendeteksi overflow
+selain ini mengecek overflow gimana
+overflow muncul sendiri jika salah atau perlu kita input pengingat overflow
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        try {
+            int hasil = Math.addExact(a, b);
+            System.out.println("Hasil: " + hasil);
+        } catch (ArithmeticException e) {
+            System.out.println("Terjadi integer overflow!");
+        }
+    }
+}
+
+apakah code ini sudah tidak menggunakan long, BigInteger, atau try-catch untuk mendeteksi overflow
+jara nge run java
+kenapa bisa eror? apakah perlsu inisiasi
+kenapa begini
+Float vs Double Precision Trap!
+dengan membaca dan menjumlahkan dua bilangan desimal dengan float dan double selanjutnya menghitung selishih absolut dari kedua hasil outputnya harus menampilkan 6 digit dibelakang koma dengan menggunakan bahasa java
